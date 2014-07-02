@@ -3,22 +3,56 @@ gulp-aws
 
 AWS CLI plugin for [gulp](https://github.com/wearefractal/gulp).
 
-#Install
+#### Pros:
+ * AWS CLI supports much more features (and has better performances) then available AWS node.js libraries
+
+#### Cons:
+ * Requires [AWS Command Line Interface](http://aws.amazon.com/cli/)
+
+
+# Install
 
 ```
-npm install --save-dev gulp-aws
+npm install gulp-aws --save-dev
 ```
 
-#Features
+#### Requirements
+ * [AWS Command Line Interface](http://aws.amazon.com/cli/)
+
+
+# Features
 
 - Upload to S3
 
-#Example
+
+
+# API
+
+### aws.s3(bucket, key, options)
+
+Upload files to AWS S3.
+
+- `bucket`: AWS bucket name
+- `key`: AWS key
+
+#### Required options
+
+- `aws_region`: AWS region
+- `aws_key`: AWS access key
+- `aws_secret`: AWS access secret
+
+#### Other options
+
+- `aws_cli_path`: The path of the AWS CLI. Defaults to `/usr/local/bin/aws`
+
+#### Example
 
 Create a tar.gz with the content of the 'src' directory and upload it to S3
 
 ```
-var aws  = require('gulp-aws')
+var aws  = require('gulp-aws');
+var tar  = require('gulp-tar');
+var gzip = require('gulp-gzip');
 
 gulp.task('my-task', function() {
     return gulp.src('src/**/*')
@@ -31,15 +65,4 @@ gulp.task('my-task', function() {
             aws_secret: 'your aws secret here'
         }));
 });
-
 ```
-
-#Required options
-
-- `aws_region`: AWS region
-- `aws_key`: AWS access key
-- `aws_secret`: AWS access secret
-
-#Other options
-
-- `aws_cli_path`: The path of the AWS CLI. Defaults to `/usr/local/bin/aws`
