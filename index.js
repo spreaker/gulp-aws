@@ -33,6 +33,7 @@ function s3(bucket, key, options) {
         // Only streams supported
         if (file.isBuffer()) {
             this.emit('error', new PluginError(PLUGIN_NAME, new Error('Only streams supported'), { showStack: true }));
+            return done();
         }
 
         var env = {
