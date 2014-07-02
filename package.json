@@ -4,7 +4,8 @@
   "description": "AWS CLI plugin for gulp",
   "keywords": [
     "gulpplugin",
-    "aws"
+    "aws",
+    "s3"
   ],
   "repository": "https://github.com/spreaker/gulp-aws.git",
   "homepage": "https://github.com/spreaker/gulp-aws/",
