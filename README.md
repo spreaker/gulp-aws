@@ -19,26 +19,28 @@ npm install gulp-aws --save-dev
 
 # API
 
-## aws.s3(options)
+### aws.s3(options)
 
 Upload files to AWS S3.
 
-### Required options
+#### Required options
 
 - `aws_region`: AWS region
 - `aws_key`: AWS access key
 - `aws_secret`: AWS access secret
 
-### Other options
+#### Other options
 
 - `aws_cli_path`: The path of the AWS CLI. Defaults to `/usr/local/bin/aws`
 
-### Example
+#### Example
 
 Create a tar.gz with the content of the 'src' directory and upload it to S3
 
 ```
-var aws  = require('gulp-aws')
+var aws  = require('gulp-aws');
+var tar  = require('gulp-tar');
+var gzip = require('gulp-gzip');
 
 gulp.task('my-task', function() {
     return gulp.src('src/**/*')
