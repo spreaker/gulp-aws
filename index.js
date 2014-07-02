@@ -1,10 +1,11 @@
 var through     = require('through2');
 var PluginError = require('gulp-util').PluginError;
 var _           = require('underscore');
+var path        = require('path');
 
 var PLUGIN_NAME = 'gulp-aws';
 
-function s3(bucket, key, options) {
+function s3(bucket, options) {
 
     _.defaults(options, {
         aws_cli_path: '/usr/local/bin/aws'
@@ -47,7 +48,7 @@ function s3(bucket, key, options) {
             's3',
             'cp',
             file.path,
-            's3://' + bucket + '/' + key
+            's3://' + bucket + '/' + path.basename(file.path)
         ];
 
         require('child_process').exec(command.join(' '), { env: env }, function(error, stdout, stderr){
