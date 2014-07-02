@@ -3,12 +3,21 @@ gulp-aws
 
 AWS CLI plugin for [gulp](https://github.com/wearefractal/gulp).
 
+#### Pros:
+ * AWS CLI supports much more features (and has better performances) then available AWS node.js libraries
+
+#### Cons:
+ * Requires [AWS Command Line Interface](http://aws.amazon.com/cli/)
+
 
 # Install
 
 ```
 npm install gulp-aws --save-dev
 ```
+
+#### Requirements
+ * [AWS Command Line Interface](http://aws.amazon.com/cli/)
 
 
 # Features
