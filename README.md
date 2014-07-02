@@ -28,9 +28,12 @@ npm install gulp-aws --save-dev
 
 # API
 
-### aws.s3(options)
+### aws.s3(bucket, key, options)
 
 Upload files to AWS S3.
+
+- `bucket`: AWS bucket name
+- `key`: AWS key
 
 #### Required options
 
