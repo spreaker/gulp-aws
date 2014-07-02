@@ -1,7 +1,7 @@
 {
   "name": "gulp-aws",
   "version": "0.0.1",
-  "description": "Gzip plugin for gulp.",
+  "description": "AWS CLI plugin for gulp",
   "keywords": [
     "gulpplugin",
     "aws"
