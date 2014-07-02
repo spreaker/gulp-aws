@@ -1,0 +1,24 @@
+{
+  "name": "gulp-aws",
+  "version": "0.0.1",
+  "description": "Gzip plugin for gulp.",
+  "keywords": [
+    "gulpplugin",
+    "aws"
+  ],
+  "repository": "https://github.com/spreaker/gulp-aws.git",
+  "homepage": "https://github.com/spreaker/gulp-aws/",
+  "author": "Spreaker <dev@spreaker.com>",
+  "main": "index.js",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://github.com/spreaker/gulp-aws/raw/master/LICENSE"
+    }
+  ],
+  "dependencies": {
+    "underscore": "^1.6.0",
+    "through2": "^0.5.1",
+    "gulp-util": "^2.2.19"
+  }
+}
