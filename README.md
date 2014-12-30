@@ -43,6 +43,7 @@ Upload files to AWS S3.
 #### Other options
 
 - `aws_cli_path`: The path of the AWS CLI. Defaults to `/usr/local/bin/aws`
+- `prefix_path`: A path to prefix the basename of the file with when forming the S3 key
 
 #### Example
 
@@ -54,11 +55,11 @@ var tar  = require('gulp-tar');
 var gzip = require('gulp-gzip');
 
 gulp.task('my-task', function() {
-    return gulp.src('src/**/*')
+    return gulp.src('src/**/*', {buffer:false})
         .pipe(tar('mypackage.tar'))
         .pipe(gzip())
         .pipe(gulp.dest('./build'))
-        .pipe(aws.s3('my-bucket-name', 'mypackage.tar.gz', {
+        .pipe(aws.s3('my-bucket-name', {
             aws_region: 'eu-west-1',
             aws_key:    'your aws key kere',
             aws_secret: 'your aws secret here'
