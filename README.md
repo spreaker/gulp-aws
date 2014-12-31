@@ -1,38 +1,34 @@
 gulp-aws
 =========
 
-AWS CLI plugin for [gulp](https://github.com/gulpjs/gulp).
-
-#### Pros:
- * AWS CLI supports much more features (and has better performances) then available AWS node.js libraries
-
-#### Cons:
- * Requires [AWS Command Line Interface](http://aws.amazon.com/cli/)
+AWS S3 plugin for [gulp](https://github.com/gulpjs/gulp). This plugin is based open AWS CLI, that supports much more features (and has better performances) then available AWS node.js libraries.
 
 
-# Install
+## Features
+
+ * Upload to S3
+
+
+## Requirements
+
+ * [AWS Command Line Interface](http://aws.amazon.com/cli/)
+
+
+## Install
 
 ```
 npm install gulp-aws --save-dev
 ```
 
-#### Requirements
- * [AWS Command Line Interface](http://aws.amazon.com/cli/)
 
-
-# Features
-
-- Upload to S3
-
-
-
-# API
+## API
 
 ### aws.s3(bucket, options)
 
 Upload files to AWS S3.
 
 - `bucket`: AWS bucket name
+
 
 #### Required options
 
