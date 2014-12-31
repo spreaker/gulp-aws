@@ -10,6 +10,10 @@
   "repository": "https://github.com/spreaker/gulp-aws.git",
   "homepage": "https://github.com/spreaker/gulp-aws/",
   "author": "Spreaker <dev@spreaker.com>",
+  "contributors": [
+    "Marco Pracucci <marco.pracucci@spreaker.com>",
+    "Rocco Zanni <rocco.zanni@spreaker.com>"
+  ],
   "main": "index.js",
   "licenses": [
     {

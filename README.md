@@ -62,3 +62,9 @@ gulp.task('my-task', function() {
         }));
 });
 ```
+
+## Contributors
+
+ * [Rocco Zanni](https://github.com/roccozanni)
+ * [Marco Pracucci](https://github.com/pracucci)
+ * [Chris Kinsman](https://github.com/chriskinsman)
