@@ -44,10 +44,9 @@ function s3(bucket, options) {
         };
 
         var filepath;
-        if(options.prefix_path) {
+        if (options.prefix_path) {
             filepath = path.join(options.prefix_path, path.basename(file.path));
-        }
-        else {
+        } else {
             filepath = path.basename(file.path);
         }
 
