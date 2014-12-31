@@ -43,12 +43,21 @@ function s3(bucket, options) {
             AWS_SECRET_ACCESS_KEY:  options.aws_secret,
         };
 
+        var filepath;
+        if(options.prefix_path) {
+            filepath = path.join(options.prefix_path, path.basename(file.path));
+        }
+        else {
+            filepath = path.basename(file.path);
+        }
+
+
         var command = [
             options.aws_cli_path,
             's3',
             'cp',
             file.path,
-            's3://' + bucket + '/' + path.basename(file.path)
+            's3://' + bucket + '/' + filepath
         ];
 
         require('child_process').exec(command.join(' '), { env: env }, function(error, stdout, stderr){
