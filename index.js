@@ -27,7 +27,7 @@ function s3(bucket, options) {
 
         // Check for empty file
         if (file.isNull()) {
-            self.push(file);
+            this.push(file);
             return done();
         }
 
