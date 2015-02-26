@@ -68,3 +68,4 @@ gulp.task('my-task', function() {
  * [Rocco Zanni](https://github.com/roccozanni)
  * [Marco Pracucci](https://github.com/pracucci)
  * [Chris Kinsman](https://github.com/chriskinsman)
+ * [Chopper](https://github.com/chopper)
