@@ -11,7 +11,8 @@ function s3(bucket, options) {
         aws_cli_path: '/usr/local/bin/aws',
         aws_region: undefined,
         aws_key: undefined,
-        aws_secret: undefined
+        aws_secret: undefined,
+        preseve_paths: false
     });
 
     if (!options.aws_region && !options.aws_profile) {
@@ -61,6 +62,8 @@ function s3(bucket, options) {
         var filepath;
         if (options.prefix_path) {
             filepath = path.join(options.prefix_path, path.basename(file.path));
+        } else if (options.preserve_paths) {
+            filepath = file.relative;
         } else {
             filepath = path.basename(file.path);
         }
