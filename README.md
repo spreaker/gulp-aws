@@ -57,7 +57,7 @@ gulp.task('my-task', function() {
         .pipe(gulp.dest('./build'))
         .pipe(aws.s3('my-bucket-name', {
             aws_region: 'eu-west-1',
-            aws_key:    'your aws key kere',
+            aws_key:    'your aws key here',
             aws_secret: 'your aws secret here'
         }));
 });
