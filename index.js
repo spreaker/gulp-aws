@@ -8,18 +8,21 @@ var PLUGIN_NAME = 'gulp-aws';
 function s3(bucket, options) {
 
     _.defaults(options, {
-        aws_cli_path: '/usr/local/bin/aws'
+        aws_cli_path: '/usr/local/bin/aws',
+        aws_region: undefined,
+        aws_key: undefined,
+        aws_secret: undefined
     });
 
-    if (!options.aws_region) {
+    if (!options.aws_region && !options.aws_profile) {
         throw new PluginError(PLUGIN_NAME, '`options.aws_region` must be specified');
     }
 
-    if (!options.aws_key) {
+    if (!options.aws_key && !options.aws_profile) {
         throw new PluginError(PLUGIN_NAME, '`options.aws_key` must be specified');
     }
 
-    if (!options.aws_secret) {
+    if (!options.aws_secret && !options.aws_profile) {
         throw new PluginError(PLUGIN_NAME, '`options.aws_secret` must be specified');
     }
 
@@ -42,6 +45,10 @@ function s3(bucket, options) {
             AWS_ACCESS_KEY_ID:      options.aws_key,
             AWS_SECRET_ACCESS_KEY:  options.aws_secret,
         };
+        
+        if (options.aws_profile) {
+            env['AWS_DEFAULT_PROFILE'] = options.aws_profile;
+        }
 
         var filepath;
         if (options.prefix_path) {
