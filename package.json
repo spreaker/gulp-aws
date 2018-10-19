@@ -1,6 +1,6 @@
 {
   "name": "gulp-aws",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "AWS S3 plugin for Gulp",
   "keywords": [
     "gulpplugin",
