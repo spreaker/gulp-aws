@@ -24,6 +24,6 @@
   "dependencies": {
     "underscore": "^1.6.0",
     "through2": "^0.5.1",
-    "gulp-util": "^2.2.19"
+    "plugin-error": "^1.0.1"
   }
 }
