@@ -1,5 +1,5 @@
 var through     = require('through2');
-var PluginError = require('gulp-util').PluginError;
+var PluginError = require('plugin-error');
 var _           = require('underscore');
 var path        = require('path');
 
