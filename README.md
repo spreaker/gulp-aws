@@ -63,6 +63,13 @@ gulp.task('my-task', function() {
 });
 ```
 
+## Changes
+
+#### `2018-10-23` - `0.1.0`
+
+- Replaced deprecated `gulp-util` with `plugin-error` (PR [#11](https://github.com/spreaker/gulp-aws/pull/11) - thanks to [chriskinsman](https://github.com/chriskinsman))
+
+
 ## Contributors
 
  * [Rocco Zanni](https://github.com/roccozanni)
